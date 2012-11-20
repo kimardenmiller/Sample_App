@@ -13,7 +13,8 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       #redirect_to @user, :notice => "You are now Signed up! (Older)"
-      flash[:success] = "Welcome to the Sample App!"
+      #sign_in @user
+      flash[:success] = "Welcome to Spokenvote! Please sign in"
       redirect_to @user
       #redirect_to root_url, :notice => "Signed up!"
     else
